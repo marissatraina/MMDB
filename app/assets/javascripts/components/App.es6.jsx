@@ -15,7 +15,6 @@ class App extends React.Component {
     })
     .done(response => {
       this.setState({movies: response.Search})
-      console.log(response.Search);
     })
     .fail(response => {
       console.log(response);
@@ -45,12 +44,27 @@ class App extends React.Component {
 
         <section className="main-container container-fluid responsive">
 
-          <div id="trending-content" className="col-md-8 container-fluid">
-            <h3>Trending Movies</h3>
+          <div id="trending-content" className="col-md-8 container-fluid responsive">
+            <div id="trending-title" className="row">
+              <h3>Trending Movies</h3>
+            </div>
+            <section id="movie-view-row" className="row">
+              <div id="movie-view-1" className="col-md-4">
+                <p>Movie 1</p>
+              </div>
+              <div id="movie-view-2" className="col-md-4">
+                <p>Movie 2</p>
+              </div>
+              <div id="movie-view-2" className="col-md-4">
+                <p>Movie 3</p>
+              </div>
+            </section>
+
           </div>
 
-          <div id="sidebar-new" className="col-md-4 container-fluid">
+          <div id="sidebar-new" className="col-md-4 container-fluid responsive">
             <h3>New Movies</h3>
+            <p>this is me seeing what will happen if i take up more space in the div</p>
           </div>
         </section>
         </div>
